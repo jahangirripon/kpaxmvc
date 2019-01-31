@@ -18,8 +18,17 @@
 
            // look in controllers for first value
            if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
-
+            // if exists, set as controller
+            $this->currentController = ucwords($url[0]);
+            // unset 0 index
+            unset($url[0]);
            }
+
+           // require the controller
+           require_once '../app/controllers/'. $this->currentController . '.php';
+
+           //instaiate controller class
+           $this->currentController = new $this->currentController;
         }
 
         public function getUrl()
