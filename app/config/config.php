@@ -9,4 +9,4 @@
     define('URLROOT', 'http://localhost/kpaxmvc');
 
     // site name
-    define ('SITENAME', 'KpaxMVC' );
+    define ('SITENAME', 'kpaxMVC' );
